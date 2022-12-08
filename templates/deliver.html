@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./static/reset.css">
+    <link rel="stylesheet" href="./static/deliver.css">
+    <title>오늘 뭐 먹지? (배달)</title>
+</head>
+
+
+<header>
+    <img id = "title_image" src = "./static/img/오늘은이거.png">
+</header>
+
+<body>
+    <div class="flex_container">
+        <div class="img-container">
+            <img  id = "shop-image" src ="./static/img/가게이미지.png">
+        </div>
+        <div class="info_container">
+            <h2 id = "store_name">가게 이름을 불러오는 중...</h2>
+                <div class = p_container>
+                <p class = "shop_info" id = "min">불러오는 중..</p>
+                <p class = "shop_info" id = "deliver_fee">불러오는 중..</p>
+                <p class = "shop_info" id = "rate">불러오는 중....</p>
+                <a class = "shop_info" id = "url" href = "" target="_blank">주문링크를 불러오는 중...</a> <br></br> 
+                <p id = "description">본 페이지는 셀레니움을 통해 정보를 크롤링 하기 때문에 평균 20초 정도의 시간이 소요 됩니다.</p> 
+            </div>
+        </div>
+    </div>
+    <div class="button-container">
+        <button id = "to-home" onclick="window.location.href='/'">메인으로 가기</button>
+        <button id = "reroll" onClick="window.location.reload()">다른거 먹을래요.</button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="text/javascript" src="./static/deliver.js"></script>
+</body>
+</html>

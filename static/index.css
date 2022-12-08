@@ -1,0 +1,135 @@
+/*오늘은 뭐먹지의 시작 애니메이션을 정의함*/
+@keyframes starting-ani{
+   0%{                                  /*시작 시 존재하지 않으며 화면의 중앙에 위치*/
+    width: 0px;
+    height: 0px;
+    transform: translate(0px, 50vh);
+    }
+    
+    50%{                                 /* 애니메이션의 50% 지점 원래 크기보다 약간 더큰 크기 + 원래 위치와 화면 중간 사이의 지점*/
+        width: 500px;
+        height: 150px;
+        transform: translate(0px, 25vh);
+    }
+
+   100%{                                    /* 애니메이션의 50% 지점 원래 크기보다 약간 더큰 크기 + 원래 위치와 화면 중간 사이의 지점*/
+    width: 403px;
+    height: 133px;
+    transform : translate(0px, 0vh);
+    }
+}
+
+/*선택 버튼들의 애니매이션을 만듬*/
+@keyframes button-start{
+    0%{ 
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+header{
+    text-align: center;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    background-image: url("./img/첫도입화면.png");
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+    margin: 0px;
+    animation : button-start 1.5s forwards;
+    
+}
+
+img { 
+    display: inline-block;
+    width: 403px;
+    height: 133px;
+    margin-top : 20px;
+    font-weight: bold;
+    text-align: center;
+    transition: 1s;
+    animation : starting-ani ease 1.5s;
+    font-size: 50px;
+}
+
+img:hover{
+    cursor: pointer;
+}
+
+
+button:hover {
+    transform: scale(1.5);
+    cursor: pointer;
+}
+
+.button_container{
+    margin-top : 20vh;
+    display: flex;
+    align-items: center;
+}
+
+
+
+button {
+    position: relative;
+    padding : 30px;
+    font-size: 28px;
+    font-weight: 700;
+    text-decoration: none;
+    width: 260px;
+    opacity: 0;
+    width: 250px;
+    height: 100px;
+    border: 2px solid black;
+    transition: 0.5s;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    animation : button-start 1.5s forwards;
+    animation-delay: 2s;
+    border-radius: 50px 50px 0 50px;
+}
+
+#deliver{
+    font-weight:bold;
+    background-color: white;
+    color : black;
+    border : 2px solid rgba(4, 55, 95);
+}
+
+#deliver::before{
+    content:'';
+    position : absolute;
+    bottom : 7px;
+    right: 7px;
+    width: 0px;
+    height: 0px;
+    border-style : solid;
+    border-color : rgba(0 0 0 /0) rgba(0 0 0 /0) rgba(3 55 95) rgba(0 0 0/0);
+    border-width: 0 0 14px 14px;
+}
+
+#package{
+    font-weight:bold;
+    background-color: white;
+    color : black;
+    border : 2px solid rgba(4, 55, 95);
+}    
+
+#package::before{
+    content:'';
+    position : absolute;
+    bottom : 7px;
+    right: 7px;
+    width: 0px;
+    height: 0px;
+    border-style : solid;
+    border-color : rgba(0 0 0 /0) rgba(0 0 0 /0) rgba(3 55 95) rgba(0 0 0/0);
+    border-width: 0 0 14px 14px;
+}
+
