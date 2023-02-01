@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width initial-scale=1.0">
+    <link rel="stylesheet" href="./static/reset.css">
+    <link rel="stylesheet" href="./static/package.css">
+    <title>오늘 뭐 먹지? (방문, 포장)</title>
+</head>
+<header>
+    <img id = "title_image" src="./static/img/오늘은이거.png" alt="title-image">
+</header>
+<body>
+    <div class="flex_container">
+        <div class = "map-container">
+            <div id="map" style = "width:100%; height:100%;"></div>
+        </div>
+        <div style = "padding:5px;" id = "info_window"></div>
+        <div class = "info_container">
+            <h2 id = "shop_name">가게 이름을 불러오는 중...</h2>
+            <div class = p_container>
+                <p class = "shop_info" id = "category">가게 분류를 불러우는 중...</p>
+                <p class = "shop_info" id = "how_far">거리를 불러오는 중...</p>
+                <p class = "shop_info" id = "address_name">주소를 불러오는 중...</p>
+                <p class = "shop_info" id = "road_address">도로명 주소를 불러오는 중....</p>
+                <a class = "shop_info" id = "shop_url" target="_blank">카카오맵 가게 사이트 보기</a>
+                <br></br>
+                <p class = "shop_info" id = "description">주의! : 랜덤 추천된 가게정보는 카카오맵 api를 통해 가져온 것으로 <br></br>폐업된 가게가 추천되거나  실제 가게 정보와 다를 수 있습니다.</p>
+            </div>
+        </div>
+    </div>
+    <div class = "button-container">
+        <button id = "to-home" onclick="window.location.href='/'">메인으로 가기</button>
+        <button id = "reroll" onClick="window.location.reload()">다른거 먹을래요</button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=yourkakaoApikey"></script>
+    <script type="text/javascript" src="./static/package.js"></script>
+</body>
+</html> 
+
